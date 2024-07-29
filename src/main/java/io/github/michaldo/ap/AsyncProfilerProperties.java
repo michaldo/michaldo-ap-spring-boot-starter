@@ -44,6 +44,14 @@ public class AsyncProfilerProperties {
      */
     private Duration maxDumpAge = Duration.ofHours(24);
 
+    /**
+     * Profiling interval in nanoseconds or in other units,
+     * if N is followed by ms (for milliseconds),
+     * us (for microseconds), or s (for seconds).
+     * Only CPU active time is counted. No samples are collected while CPU is idle.
+     */
+    private String interval = "100ms";
+
     public boolean isEnabled() {
         return enabled;
     }
@@ -83,5 +91,13 @@ public class AsyncProfilerProperties {
 
     public void setMaxDumpAge(Duration maxDumpAge) {
         this.maxDumpAge = maxDumpAge;
+    }
+
+    public String getInterval() {
+        return interval;
+    }
+
+    public void setInterval(String interval) {
+        this.interval = interval;
     }
 }

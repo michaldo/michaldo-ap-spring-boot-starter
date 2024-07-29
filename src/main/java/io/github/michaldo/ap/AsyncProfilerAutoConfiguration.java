@@ -56,9 +56,10 @@ public class AsyncProfilerAutoConfiguration  {
             Files.createDirectories(directories);
         }
         String command = String.format(
-                "start,event=%s,loop=%s,file=%s",
+                "start,event=%s,loop=%s,interval=%s,file=%s",
                 props.getEvent(),
                 props.getLoop(),
+                props.getInterval(),
                 props.getFile());
         AsyncProfilerLoader.load().execute(command);
         log.info("AsyncProfiler started with command: " + command);
@@ -129,6 +130,7 @@ public class AsyncProfilerAutoConfiguration  {
         }
     }
 
+    // example: 1d0h0m
     private String valueOf(Duration duration) {
         return String.format("%dd%dh%dm",
                 duration.toDays(), duration.toHoursPart(), duration.toMinutesPart());

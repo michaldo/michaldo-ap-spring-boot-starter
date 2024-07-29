@@ -17,16 +17,17 @@ handle dump files.
 
 # Parameters
 
-| Name                   | Meaning             | Default value |
-|------------------------|---------------------|---------------|
-| async-profiler.enabled | Enable profiling.   | false         |
-| async-profiler.event   | Profiling mode      | wall,alloc    |
-| async-profiler.file    | Dump file template  | %t.jfr        |
-| async-profiler.loop    | Dump file frequency | 5m            |
-| async-profiler.max-dump-age| Dump file max age | 24h         |
+| Name                        | Meaning             | Default value | Async Profiler native 
+|-----------------------------|---------------------|---------------|----------------------
+| async-profiler.enabled      | Enable profiling.   | false         | no
+| async-profiler.event        | Profiling mode      | wall,alloc    | yes
+| async-profiler.interval     | Profiling interval  | 100ms         | yes
+| async-profiler.file         | Dump file template  | %t.jfr        | yes
+| async-profiler.loop         | Dump file frequency | 5m            | yes
+| async-profiler.max-dump-age | Dump file max age   | 24h           | no
 
-Parameters `event`, `file` and `loop` are native Async Profiler parameters
-and fully documented here: https://github.com/async-profiler/async-profiler?tab=readme-ov-file#profiler-options
+Native Async Profiler parameters
+are fully documented here: https://github.com/async-profiler/async-profiler?tab=readme-ov-file#profiler-options
 
 # Alternatives
 
