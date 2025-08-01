@@ -27,7 +27,7 @@
         <dependency>
             <groupId>me.bechberger</groupId>
             <artifactId>ap-loader-all</artifactId>
-            <version>4.0-10</version>
+            <version>4.1-10</version>
         </dependency>
     </dependencies>
     <build>
